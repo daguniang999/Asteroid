@@ -7,18 +7,18 @@
 		http://www.springframework.org/schema/security
 		https://www.springframework.org/schema/security/spring-security.xsd">
 
-    <security:http use-expressions="false">
-        <security:intercept-url pattern="/**" access="ROLE_USER" />
-        <security:form-login/>
-    </security:http>
+<!--    <security:http use-expressions="false">-->
+<!--        <security:intercept-url pattern="/**" access="ROLE_USER" />-->
+<!--        <security:form-login/>-->
+<!--    </security:http>-->
 
-    <security:authentication-manager>
-        <security:authentication-provider>
-            <security:user-service>
-                <security:user name="111" authorities="ROLE_USER" password="111"></security:user>
-            </security:user-service>
-        </security:authentication-provider>
+<!--    <security:authentication-manager>-->
+<!--        <security:authentication-provider>-->
+<!--            <security:user-service>-->
+<!--                <security:user name="111" authorities="ROLE_USER" password="111"></security:user>-->
+<!--            </security:user-service>-->
+<!--        </security:authentication-provider>-->
 
-    </security:authentication-manager>
+<!--    </security:authentication-manager>-->
 
 </beans>

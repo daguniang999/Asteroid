@@ -17,22 +17,14 @@
     </bean>
 
     <bean id="DataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="${jdbc.driverClassName}"></property>
-        <property name="url" value="${jdbc.url}"></property>
-        <property name="username" value="${jdbc.username}"></property>
-        <property name="password" value="${jdbc.password}"></property>
-        <property name="initialSize" value="${jdbc.initSize}"></property>
-        <property name="maxTotal" value="${jdbc.maxActive}"></property>
+        <property name="driverClassName" value="${test.jdbc.driverClassName}"></property>
+        <property name="url" value="${test.jdbc.url}"></property>
+        <property name="username" value="${test.jdbc.username}"></property>
+        <property name="password" value="${test.jdbc.password}"></property>
+        <property name="initialSize" value="${test.jdbc.initSize}"></property>
+        <property name="maxTotal" value="${test.jdbc.maxActive}"></property>
     </bean>
 
     <mvc:annotation-driven></mvc:annotation-driven>
     <mvc:default-servlet-handler/>
-
-<!--    &lt;!&ndash;cors跨域支持&ndash;&gt;-->
-    <mvc:cors>
-        <mvc:mapping path="/**"
-                     allowed-origins="http://localhost:4200"
-                     allowed-methods="GET,POST,PUT,DELETE,OPTIONS"
-                     max-age="123" />
-    </mvc:cors>
 </beans>
