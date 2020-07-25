@@ -6,7 +6,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:application.xml, classpath:springmvc-security.xml</param-value>
+        <param-value>classpath:application.xml, classpath:spring-mybatis.xml</param-value>
     </context-param>
 
     <listener>
@@ -29,21 +29,17 @@
     </servlet-mapping>
 
     <filter>
-        <filter-name>springSecurityFilterChain</filter-name>
-        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>com.chenx.filter.AdminFilter</filter-class>
+        <init-param>
+            <param-name>Ignore</param-name>
+            <param-value>/login;*/auth/*;*/register;*/swagger-ui.html*;*/swagger-resources*;*/v2/*;*/webjars/*</param-value>
+        </init-param>
     </filter>
 
     <filter-mapping>
-        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-name>AdminFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <filter>
-        <filter-name>cors</filter-name>
-        <filter-class>com.chenx.bean.CORSFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>cors</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
 </web-app>
