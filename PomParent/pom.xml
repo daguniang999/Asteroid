@@ -18,7 +18,7 @@
         <spring.version>4.3.26.RELEASE</spring.version>
         <mybatis.version>3.2.8</mybatis.version>
         <mysql.version>8.0.15</mysql.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
